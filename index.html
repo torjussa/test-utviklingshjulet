@@ -1,0 +1,19 @@
+<html>
+  <script>
+    function fetchSession() {
+      fetch(
+        "https://olt-utviklingshjul-be-dev-app.azurewebsites.net/api/Authentication/session"
+      )
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+    }
+  </script>
+  <body>
+    <a
+      href="https://olt-utviklingshjul-be-dev-app.azurewebsites.net/api/Authentication/login?redirectUri=https://dev.utviklingshjulet.no"
+    >
+      Loginnn
+    </a>
+    <button onclick="fetchSession()">Fetch Session</button>
+  </body>
+</html>
